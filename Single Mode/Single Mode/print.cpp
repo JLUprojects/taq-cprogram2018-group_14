@@ -46,7 +46,7 @@ void PrintRules(int *highest)
 	printf("Press space key to start!");
 	errno_t err;
 	FILE *file;
-	if ((err = fopen_s(&file, "HighestScore_singlemode.txt", "rb")) == 0) {
+	if ((err = fopen_s(&file, "HighestScore_singlemode.txt", "rb")) == 0) { //read in the highestscore
 		fread(highest, 4U, 1, file);
 		fclose(file);
 	}

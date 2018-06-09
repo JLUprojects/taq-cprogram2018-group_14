@@ -11,8 +11,8 @@ int main() {
 	snake *head1, *head2;
 	time_t start_time;
 	int pause, again;
-	int creat_food;
-	system("mode con cols=130 lines=35  ");
+	int create_food;
+	system("mode con cols=128 lines=31  ");
 	FirstPage();
 	PlayBackGroundMusic();
 	pause = 0;
@@ -26,7 +26,7 @@ newgame:
 	food1 = { 0,0 }; food2 = { 0,0 };
 
 	PrintRules();
-	CreatMap();
+	CreateMap();
 	head1 = InitializeSnake(4, 1, 10);
 	head2 = InitializeSnake(-4, -1, 11);
 
@@ -35,27 +35,27 @@ newgame:
 		pause = _getch();
 
 	start_time = time(NULL);
-	food1 = CreatFood(13, 10, head1, head2, food1, food2);       //creat foods for both snake
-	food2 = CreatFood(14, 20, head1, head2, food1, food2);
+	food1 = CreateFood(13, 10, head1, head2, food1, food2);       //creat foods for both snake
+	food2 = CreateFood(14, 20, head1, head2, food1, food2);
 
 	for (;;) {
 		GetDirection(&dir1, &dir2);
 
-		creat_food = MoveSnake1(dir1, &head1, food1, food2, &score1);
-		switch (creat_food) {
+		create_food = MoveSnake1(dir1, &head1, food1, food2, &score1);
+		switch (create_food) {
 		case 1:
-			food1 = CreatFood(13, 10, head1, head2, food1, food2); break;
+			food1 = CreateFood(13, 10, head1, head2, food1, food2); break;
 		case 2:
-			food2 = CreatFood(14, 20, head1, head2, food1, food2); break;
+			food2 = CreateFood(14, 20, head1, head2, food1, food2); break;
 		case 0:break;
 		}
 
-		creat_food = MoveSnake2(dir2, &head2, food1, food2, &score2);
-		switch (creat_food) {
+		create_food = MoveSnake2(dir2, &head2, food1, food2, &score2);
+		switch (create_food) {
 		case 1:
-			food1 = CreatFood(13, 10, head1, head2, food1, food2); break;
+			food1 = CreateFood(13, 10, head1, head2, food1, food2); break;
 		case 2:
-			food2 = CreatFood(14, 20, head1, head2, food1, food2); break;
+			food2 = CreateFood(14, 20, head1, head2, food1, food2); break;
 		case 0:break;
 		}
 		Sleep(250);

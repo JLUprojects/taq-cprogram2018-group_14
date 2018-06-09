@@ -29,16 +29,16 @@ snake* InitializeSnake(int n, int dir, int color)
 }
 
 
-COORD CreatFood(int color, int n, snake *head1, snake *head2, COORD food1, COORD food2)
+COORD CreateFood(int color, int n, snake *head1, snake *head2, COORD food1, COORD food2)
 {
 	COORD food;
 	snake *p = NULL;
-	int recreat, nothing;                 
+	int recreate, nothing;                 
 	srand((unsigned int)time(NULL) + n);//two function call in the main function to creat foods for both snakes
 	                                                            //are so close that their time are the same
 	                                                            //so change the argument of srand
 	do {
-		recreat = 0;
+		recreate = 0;
 
 		int x = (rand() % (WIDTH - 5)) + 3;       //make sure that food is in the map
 		food.X = (x % 2) ? x + 1 : x;      //x-coordinate is even number
@@ -46,27 +46,27 @@ COORD CreatFood(int color, int n, snake *head1, snake *head2, COORD food1, COORD
 		for (p = head1; p != NULL; p = p->next) {    //if food coincides with snake1
 			if (CompareCoordinate(p->cor, food))
 			{
-				recreat = 1; goto creatfood;
+				recreate = 1; goto createfood;
 			}
 		}
 		for (p = head2; p != NULL; p = p->next) {     //if food coincides with snake2
 			if (CompareCoordinate(p->cor, food))
 			{
-				recreat = 1; goto creatfood;
+				recreate = 1; goto createfood;
 			}
 		}
 		if (CompareCoordinate(food1, food))
 		{
-			recreat = 1; goto creatfood;
+			recreate = 1; goto createfood;
 		}
 
 		if (CompareCoordinate(food2, food))
 		{
-			recreat = 1; goto creatfood;
+			recreate = 1; goto createfood;
 		}
-	creatfood:
-		nothing = 0;//no meaning,it seems that there must have something after goto identification
-	} while (recreat);
+	createfood:
+		nothing = 0;//this line has no meaning,it seems that there must have something after goto identification?
+	} while (recreate);
 
 	Pos(food.X, food.Y);
 	SetColor(color);
@@ -82,7 +82,7 @@ void GetDirection(int *dir1, int *dir2)
 		if (dir_t == 224)   //
 			dir_t = _getch();
 	}
-	//only arrow keys and awsd are valid
+	//only arrow keys and 'awsd' are valid
 	if ((dir_t == 72 || dir_t == 75 || dir_t == 77 || dir_t == 80) && abs(dir_t - *dir1) != 2 && abs(dir_t - *dir1) != 8) {
 		*dir1 = dir_t;
 	}

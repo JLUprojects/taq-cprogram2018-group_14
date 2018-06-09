@@ -2,7 +2,7 @@
 #include <Windows.h>
 #include <stdio.h>
 
-void CreatMap()
+void CreateMap()
 {
 	SetColor(15);
 	int i;
