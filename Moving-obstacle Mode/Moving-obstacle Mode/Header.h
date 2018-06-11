@@ -40,7 +40,7 @@ snake* Load(int*, int*, int*, int *);
 void Save(int*, int*, int*,int *, snake*);
 void CreateMap();
 void SetColor(unsigned short);
-void Pos(int, int);
+void Pos(short,short);
 void HideCursor();
 void PrintRoles(int *);
 int GameOver(int, int);

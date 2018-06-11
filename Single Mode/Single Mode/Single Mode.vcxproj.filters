@@ -15,28 +15,28 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Windows_API.cpp">
-      <Filter>资源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="save.cpp">
-      <Filter>资源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="print.cpp">
-      <Filter>资源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="main.cpp">
-      <Filter>资源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="game_over.cpp">
-      <Filter>资源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="basic_function.cpp">
-      <Filter>资源文件</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="Header.h">
       <Filter>头文件</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="basic_function.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="game_over.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="print.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="save.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Windows_API.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

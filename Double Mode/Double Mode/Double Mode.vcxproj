@@ -115,14 +115,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Header.h" />
+  </ItemGroup>
+  <ItemGroup>
     <ClCompile Include="basicfunction.cpp" />
     <ClCompile Include="gameover.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="print.cpp" />
     <ClCompile Include="Windows API.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Header.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

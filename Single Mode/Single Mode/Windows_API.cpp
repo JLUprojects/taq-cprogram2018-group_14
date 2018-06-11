@@ -9,7 +9,7 @@ void PlayBackGroundMusic()
 	PlaySound("music.wav", NULL, SND_FILENAME | SND_ASYNC | SND_LOOP);
 }
 
-void Pos(int x, int y)//set  position of the cursor 
+void Pos(short x, short y)//set  position of the cursor 
 {
 	COORD pos = { x,y };
 	HANDLE hOutput;

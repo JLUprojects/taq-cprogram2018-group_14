@@ -25,19 +25,19 @@ typedef struct SNAKE
 }snake;
 
 void PlayBackGroundMusic();
-void Pos(int x, int y);
-void SetColor(unsigned short color);
+void Pos(short, short);
+void SetColor(unsigned short);
 void HideCursor();
-snake* InitializeSnake(int n, int dir, int color);
+snake* InitializeSnake(int, int, int);
 void CreateMap();
-int CompareCoordinate(COORD pt1, COORD pt2);
-COORD CreateFood(int color, int n, snake *head1, snake *head2, COORD food1, COORD food2);
-void GetDirection(int *dir1, int *dir2);
-int MoveSnake1(int dir1, snake **head1, COORD food1, COORD food2, int *score1);
-int MoveSnake2(int dir2, snake **head2, COORD food1, COORD food2, int *score2);
-int AliveOrNot(snake *head1, snake *head2);
-void FreeSnake(snake *head1, snake *head2);
-int GameOver(int end, int score1, int score2);
+int CompareCoordinate(COORD, COORD);
+COORD CreateFood(int, int, snake *, snake *, COORD, COORD);
+void GetDirection(int *, int *);
+int MoveSnake1(int , snake **, COORD , COORD , int *);
+int MoveSnake2(int , snake **, COORD , COORD , int *);
+int AliveOrNot(snake *, snake *);
+void FreeSnake(snake *, snake *);
+int GameOver(int, int, int);
 void PrintRules();
 void FirstPage();
 

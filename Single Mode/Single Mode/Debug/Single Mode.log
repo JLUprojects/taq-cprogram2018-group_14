@@ -1,2 +1,8 @@
-﻿  print.cpp
+﻿  save.cpp
+  print.cpp
+  main.cpp
+  game_over.cpp
+  basic_function.cpp
+  Windows_API.cpp
+  正在生成代码...
   Single Mode.vcxproj -> D:\C_language\GitHub\Single Mode\Debug\Single Mode.exe

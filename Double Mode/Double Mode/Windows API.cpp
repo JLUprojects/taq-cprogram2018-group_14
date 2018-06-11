@@ -9,11 +9,10 @@ void PlayBackGroundMusic()
 	PlaySound("music.wav", NULL, SND_FILENAME | SND_ASYNC | SND_LOOP);
 }
 
-void Pos(int x, int y)
+void Pos(short x, short y)
 {
 	COORD pos;
-	pos.X = x;
-	pos.Y = y;
+	pos = { x,y };
 	HANDLE hOutput;
 	hOutput = GetStdHandle(STD_OUTPUT_HANDLE);
 	SetConsoleCursorPosition(hOutput, pos);

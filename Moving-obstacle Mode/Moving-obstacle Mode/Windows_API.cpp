@@ -8,7 +8,7 @@ void PlayBackGroundMusic()
 	PlaySound("music.wav", NULL, SND_FILENAME | SND_ASYNC | SND_LOOP);
 }
 
-void Pos(int x, int y)//设置光标位置
+void Pos(short x, short y)//设置光标位置
 {
 	COORD pos = { x,y };
 	HANDLE hOutput;
